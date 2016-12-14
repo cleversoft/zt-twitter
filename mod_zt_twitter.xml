@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="2.5"
+        client="site"
+        method="upgrade">
+    <name>ZT Twitter</name>
+    <author>ZooTemplate</author>
+    <creationDate>August 2013</creationDate>
+    <copyright>Copyright (c) 2008 - 2012 ZooTemplate. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>support@zootemplate.com</authorEmail>
+    <authorUrl>www.zootemplate.com</authorUrl>
+    <version>2.6</version>
+    <description>ZT Twitter</description>
+    <files>
+        <filename module="mod_zt_twitter">mod_zt_twitter.php</filename>
+        <filename>helper.php</filename>
+        <filename>en-GB.mod_zt_twitter.ini</filename>
+        <folder>admin</folder>
+        <folder>assets</folder>
+        <folder>libs</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_zt_twitter.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="modules/mod_zt_twitter/admin/element/">
+            <fieldset name="basic">
+                <field name="asset" type="asset" path="modules/mod_zt_twitter/admin/"></field>
+
+                <field name="usernames" type="text" default="" size="50" label="Usernames" description="Usernames." />
+                <field name="count_twitters" type="text" default="5" size="50" label="Number of twitter display" description="Number of twitter display." />
+
+                <field name="consumer_key" type="password" default="YVNHZUl0aVh1eVEzSXZ0SEgyQmZYV0l4Qg==" size="50" label="API key" description="API key." />
+                <field name="consumer_secret" type="password" default="Qk9QN3RNSUM1NzNuNm5MYVN1VFN0RzRnNVNLam1YU2Y0Zm81YWZQOTBNcG5XdDZuSm0=" size="50" label="API secret" description="API secret." />
+                <field name="oauth_access_token" type="password" default="MTU1MjQ0NTY3Ni1OM1ZQWEN0cmdxWHBPNElleHdLeklWQkJueFlpMWVzMHhGUG5wejA=" size="50" label="Oauth access token" description="Oauth access token." />
+                <field name="oauth_access_token_secret" type="password" default="N3pVMkptdHdQYjc1RFQyT3U0dUE0QlVURWlKN1JvdlNuTTYzTFc0b1VVdHp4" size="50" label="oauth_access_token_secret" description="oauth_access_token_secret." />
+
+                <field name="show_tweet_title" type="radio" default="1" label="Show Tweet Title" description="Show tweet title." class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="tweet_title_text" type="text" default="Tweets" size="50" label="Tweet Title Text" description="Tweet Title Text." />
+
+                <field name="show_avatar" type="radio" default="1" label="Show Avatar" description="Show Avatar." class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="show_date" type="radio" default="1" label="Show Tweet Date" description="Show Tweet Date" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" default="" size="50" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+                <field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module.">
+                    <option value="1">Use global</option>
+                    <option value="0">No caching</option>
+                </field>
+                <field name="cache_time" type="text" default="3600" size="50" label="Cache Time" description="The time before the module is recached." />
+                <field name="module_layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field name="pause" type="text" default="2000" class="" label="Pause" description="The amount of time (in ms) between each auto transition">
+                </field>
+
+                <field name="autoPauseHover" type="list" default="hover" class="" label="Pause on hover" description="Auto pause when hover">
+                    <option value="hover">Yes</option>
+                    <option value="none">No</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

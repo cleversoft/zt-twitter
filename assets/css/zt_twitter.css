@@ -1,0 +1,34 @@
+.zt-twitter-timeline {
+    margin: 0;
+    outline: none;
+    padding: 10px 0 0;
+    text-align: left;
+}
+.zt-timeline-item {
+    margin: 5px 0;
+}
+.zt-timeline-item .zt-item-avatar {
+    float: left;
+    margin-right: 5px;
+}
+.zt-timeline-item a {
+    outline: none;
+}
+
+.carousel-indicators {
+    top: 100%;
+    bottom: -5px;
+    left:30%;
+}
+.carousel-indicators li {
+    background-color: rgba(184, 146, 146, 0.25);
+}
+.carousel-indicators .active {
+    background-color: #000;
+}
+.carousel-control {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+}
